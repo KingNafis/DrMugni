@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mugni Care | Professional Clinic</title>
+    <meta
+      name="description"
+      content="Professional doctor website with appointment requests, services, testimonials, and FAQs. Frontend-only."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a id="top"></a>
+    <header class="header" id="header">
+      <div class="container nav">
+        <a href="#top" class="logo">
+          <img src="images/logo.png" alt="Clinic logo" width="36" height="36" />
+          <span>Dr. Umme Abkara Mugni</span>
+        </a>
+        <nav id="nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="actions">
+          <button
+            class="btn ghost"
+            id="darkToggle"
+            aria-label="Toggle dark mode"
+          >
+            Dark
+          </button>
+          <button class="btn primary" id="openModalBtn">
+            Book Appointment
+          </button>
+          <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text reveal">
+            <h1>
+              Compassionate Care, <span class="accent">Backed by Science</span>
+            </h1>
+            <p>
+              Your health deserves a physician who listens, explains, and
+              empowers. Book an appointment and take the first step toward
+              better health today.
+            </p>
+            <div class="cta">
+              <button class="btn primary" id="heroBookBtn">
+                Book Appointment
+              </button>
+              <a class="btn ghost" href="#services">Explore Services</a>
+            </div>
+            <ul class="badges">
+              <li>Same‑day slots</li>
+              <li>Telemedicine</li>
+              <li>ISO‑certified clinic</li>
+            </ul>
+          </div>
+          <div class="hero-media reveal">
+            <div class="card glass">
+              <div class="pulse"></div>
+              <h3>Clinic at a Glance</h3>
+              <ul class="list">
+                <li><strong>Location:</strong> Uttara, Dhaka</li>
+                <li><strong>Hours:</strong> Sat–Thu, 9am–6pm</li>
+                <li><strong>Hotline:</strong> +880 1627-170336</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bg" aria-hidden="true"></div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Services</h2>
+          <p class="section-subtitle reveal">
+            Evidence‑based treatments tailored to your needs.
+          </p>
+          <div id="servicesGrid" class="grid cards"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section alt">
+        <div class="container about-grid">
+          <div class="reveal">
+            <h2 class="section-title">About Dr. Mugni</h2>
+            <p class="lead">MBBS (AFMC), FCPS (Medicine), MRCP (UK)</p>
+            <p>
+              With over 12 years of clinical experience, Dr. Mugni specializes in
+              internal medicine and preventive care. She blends empathy with
+              evidence‑based practice to build long‑term partnerships with
+              patients.
+            </p>
+            <ul class="list">
+              <li>Former Registrar, Apollo Hospitals</li>
+              <li>Member, Royal College of Physicians (UK)</li>
+              <li>Lead, Non‑communicable Disease Clinic</li>
+            </ul>
+          </div>
+          <div class="profile-card glass reveal">
+            <img src="images/clinic.jpg" alt="Clinic" class="clinic-image" />
+            <div class="stats">
+              <div>
+                <span class="num" data-count="12">0</span
+                ><span class="label">Years</span>
+              </div>
+              <div>
+                <span class="num" data-count="8000">0</span
+                ><span class="label">Patients</span>
+              </div>
+              <div>
+                <span class="num" data-count="4.9">0</span
+                ><span class="label">Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="credentials" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Credentials & Memberships</h2>
+          <div class="grid logos">
+            <div class="logo glass reveal" title="BMDC">BMDC</div>
+            <div class="logo glass reveal" title="RCP UK">RCP UK</div>
+            <div class="logo glass reveal" title="BMA">BMA</div>
+            <div class="logo glass reveal" title="WHO">WHO</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section alt">
+        <div class="container">
+          <h2 class="section-title reveal">Patient Stories</h2>
+          <div class="carousel-controls">
+            <button
+              class="btn ghost"
+              id="prevTestimonial"
+              aria-label="Previous"
+            >
+              ‹
+            </button>
+            <button class="btn ghost" id="nextTestimonial" aria-label="Next">
+              ›
+            </button>
+          </div>
+          <div class="carousel" id="testimonialTrack"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Frequently Asked Questions</h2>
+          <div id="faqList" class="faq"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <h2 class="section-title">Contact & Location</h2>
+            <p class="lead">Uttara, Dhaka • Sat–Thu, 9:00–18:00</p>
+            <ul class="list">
+              <li><strong>Hotline:</strong> +880 1627-170336</li>
+              <li><strong>Email:</strong> mugniabkara0@gmail.com</li>
+              <li><strong>WhatsApp:</strong> +880 1759-915043</li>
+            </ul>
+            <a class="btn primary" href="tel:+8801627170336">Call Now</a>
+          </div>
+          <div class="map glass reveal" aria-label="Map placeholder">
+            <a
+              href="https://maps.app.goo.gl/VtYP6weggguctxBh6"
+              target="_blank">
+              <img
+                src="images/map-zamzam.png"
+                alt="Clinic Location Map"
+                style="width: 100%; height: auto; border-radius: 8px"
+              />
+            </a>
+            <div class="pin">Clinic</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="brand">
+          <span class="logo-mini">DM</span>
+          <div>
+            <strong>Dr. Mugni Care</strong>
+            <p class="muted">© <span id="year"></span> All rights reserved.</p>
+          </div>
+        </div>
+        <nav class="foot-nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="modal" id="appointmentModal" aria-hidden="true">
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="close" id="closeModal" aria-label="Close">×</button>
+        <h3 id="modalTitle">Book Appointment</h3>
+        <form id="appointmentForm" class="form">
+          <div class="row">
+            <label
+              >Full Name<span class="req">*</span>
+              <input name="name" placeholder="Your name" required />
+            </label>
+            <label
+              >Email
+              <input name="email" type="email" placeholder="you@email.com" />
+            </label>
+          </div>
+          <div class="row">
+            <label
+              >Phone<span class="req">*</span>
+              <input name="phone" placeholder="+880..." required />
+            </label>
+            <label
+              >Service<span class="req">*</span>
+              <select name="service" required>
+                <option value="">Select service</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <label
+              >Date<span class="req">*</span>
+              <input name="date" type="date" required />
+            </label>
+            <label
+              >Time<span class="req">*</span>
+              <select name="time" required>
+                <option value="">Select time</option>
+              </select>
+            </label>
+          </div>
+          <label
+            >Notes
+            <textarea
+              name="message"
+              rows="3"
+              placeholder="Symptoms, concerns, etc."
+            ></textarea>
+          </label>
+          <button class="btn primary" type="submit">Submit Request</button>
+          <p class="muted small">
+            No payment required. We will confirm your slot via phone or email.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <span id="toastMsg"></span>
+      <button id="toastClose" aria-label="Close">×</button>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
